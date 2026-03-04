@@ -116,3 +116,47 @@ Sample body:
   - URL: `http://localhost:5000/api/auth/login`
   - Body type: `raw` + `JSON`
   - Paste login sample payload
+
+## Run in VS Code
+
+1. Open VS Code.
+2. Go to **File > Open Folder...** and select this project folder (`AzamKhan`).
+3. Open Terminal in VS Code (**Terminal > New Terminal**).
+4. Run dependencies install:
+   ```bash
+   npm install
+   ```
+5. Create `.env` file from example:
+   ```bash
+   cp .env.example .env
+   ```
+6. (Optional) Start MongoDB locally if not already running.
+7. Start server in VS Code terminal:
+   ```bash
+   npm start
+   ```
+8. Verify API is running by visiting:
+   - `http://localhost:5000/`
+
+### Debug mode in VS Code (optional)
+1. Open **Run and Debug** panel (`Ctrl+Shift+D`).
+2. Click **create a launch.json file** (if prompted).
+3. Choose **Node.js**.
+4. Use this basic config:
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run API",
+      "program": "${workspaceFolder}/src/server.js"
+    }
+  ]
+}
+```
+
+Then press **F5** to run under debugger.
+
