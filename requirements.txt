@@ -1,0 +1,5 @@
+opencv-python==5.0.0.93
+dlib-bin==20.0.1
+numpy==2.5.3
+scipy==1.18.1
+playsound==1.2.2
